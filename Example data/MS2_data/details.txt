@@ -1,2 +1,2 @@
 20200724_SB_CCCP+ISRIB_Import_PSMs.txt example PSMs data has been published in molecular cell : https://www.sciencedirect.com/science/article/pii/S1097276521009540
-Data is CCCP and CCCP+ ISRIB treatment for 2 hours and compare to DMSO control. It shows mitochondrial import proteomics.
+Data is CCCP and CCCP+ ISRIB treatment for 2 hours and compare to DMSO control. SILAC labelling is 2 hour as well with treatment itself. It shows mitochondrial import proteomics.
