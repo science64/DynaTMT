@@ -30,7 +30,7 @@ If you use DynaTMT-py in your research, please cite the following publications:
    > Bozkurt S, Parmar BS, Münch C. Quantifying mitochondrial protein import by mePRODmt proteomics. *Methods in Enzymology*. 2024;706:449-474.
    > [DOI: 10.1016/bs.mie.2024.07.017](https://pubmed.ncbi.nlm.nih.gov/39455229/)
 
-4. **Injection Time Adjustment Method:**
+4. **Injection Time Adjustment and Targeted Mass Differences (TMD) Method:**
    > Klann K, Münch C. Instrument Logic Increases Identifications during Multiplexed Translatome Measurements. *Analytical Chemistry*. 2020.
    > [DOI: 10.1021/acs.analchem.0c01749](https://doi.org/10.1021/acs.analchem.0c01749)
 
