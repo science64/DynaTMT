@@ -22,7 +22,7 @@ If you use DynaTMT-py in your research, please cite the following publications:
    > Klann K, Tascher G, Münch C. Functional Translatome Proteomics Reveal Converging and Dose-Dependent Regulation by mTORC1 and eIF2α. *Molecular Cell*. 2020;77(4):913-925.e4.
    > [DOI: 10.1016/j.molcel.2019.11.010](https://doi.org/10.1016/j.molcel.2019.11.010)
 
-2. **Mitochondrial Protein Import Proteomics mePROTmt (2022):**
+2. **Mitochondrial Protein Import Proteomics mePRODmt (2022):**
    > Schäfer JA, Bozkurt S, Michaelis JB, Klann K, Münch C. Global mitochondrial protein import proteomics reveal distinct regulation by translation and translocation machinery. *Molecular Cell*. 2022;82(2):435-446.e7.
    > [DOI: 10.1016/j.molcel.2021.11.004](https://www.cell.com/molecular-cell/fulltext/S1097-2765(21)00954-0)
 
