@@ -604,4 +604,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Acknowledgments
 
-This work was developed in the [Münch Lab](https://muenchlab.de/) at Goethe University Frankfurt.
+This work was developed in the [Münch Lab](https://molsysmed.de/) at Goethe University Frankfurt.
