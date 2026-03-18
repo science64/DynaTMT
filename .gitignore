@@ -1,9 +1,8 @@
 build/*
-DynaTMT_py_SB.egg-info/*
+DynaTMT.egg-info/*
 dist/*
 .idea/*
 .ipynb_checkpoints/*
-DynaTMT_SB/.idea/*
-DynaTMT_SB/.ipynb_checkpoints/*
-DynaTMT_SB/__pycache__/*
-mePROD LMM suleyman - production.ipynb
+DynaTMT/.idea/*
+DynaTMT/.ipynb_checkpoints/*
+DynaTMT/__pycache__/*

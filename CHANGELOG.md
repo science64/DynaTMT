@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.9.3] - 2026-03-18
+### Updated
+- Repository renamed from `DynaTMT-py-SB` / `DynaTMT-py` to `DynaTMT`. All references in code, documentation, and URLs updated accordingly.
+- Default branch renamed from `master` to `main`.
+- `baseline_correction()` function (both `PD_input` and `plain_text_input` classes):
+  - PSM/Peptide file detection is now case-insensitive (`.lower()` comparison) to handle column name variations across ProteomeDiscoverer versions.
+  - Added support for **Proteome Discoverer 3.2** column names alongside existing PD 2.4 columns (backward compatible):
+    - PSMs: additionally checks for `Identifying Node Type`, `Identifying Node`, or `Search ID` columns (PD 3.2), in addition to `PSMs Peptide ID` (PD 2.4).
+    - Peptides: additionally checks for `Number of PSMs` column (PD 3.2), in addition to `Peptide Group ID` (PD 2.4).
+
 ## [2.9.2] - 2024-06-03
 ### Updated
 - `baseline_correction()` function:

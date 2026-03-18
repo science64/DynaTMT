@@ -1,4 +1,4 @@
-# DynaTMT-py
+# DynaTMT
 
 [![DOI](https://zenodo.org/badge/319922981.svg)](https://zenodo.org/badge/latestdoi/319922981)
 
@@ -12,11 +12,11 @@ The package can also be used to analyse any pSILAC/TMT dataset.
 
 ## Version
 
-Current version: **2.9.2** (2024-06-03). See the [CHANGELOG](CHANGELOG.md) for details on what has changed.
+Current version: **2.9.3** (2026-03-18). See the [CHANGELOG](CHANGELOG.md) for details on what has changed.
 
 ## References
 
-If you use DynaTMT-py in your research, please cite the following publications:
+If you use DynaTMT in your research, please cite the following publications:
 
 1. **Original mePROD Publication (2020):**
    > Klann K, Tascher G, Münch C. Functional Translatome Proteomics Reveal Converging and Dose-Dependent Regulation by mTORC1 and eIF2α. *Molecular Cell*. 2020;77(4):913-925.e4.
@@ -60,15 +60,15 @@ If you use DynaTMT-py in your research, please cite the following publications:
 ### Install from GitHub (Recommended)
 
 ```bash
-pip install --upgrade git+https://github.com/science64/DynaTMT-py-SB.git
+pip install --upgrade git+https://github.com/science64/DynaTMT.git
 ```
 
 ### Install from Source
 
 ```bash
 # Clone the repository
-git clone https://github.com/science64/DynaTMT-py-SB.git
-cd DynaTMT-py-SB
+git clone https://github.com/science64/DynaTMT.git
+cd DynaTMT
 
 # Install the package
 pip install .
@@ -93,7 +93,7 @@ pip install --upgrade git+https://github.com/science64/PBLMM.git
 ## Quick Start
 
 ```python
-import DynaTMT_SB.DynaTMT as mePROD
+import DynaTMT.DynaTMT as mePROD
 import pandas as pd
 
 # Load your PSMs file
@@ -128,7 +128,7 @@ MS2-based quantification requires:
 ```python
 from datetime import date
 import pandas as pd
-import DynaTMT_SB.DynaTMT as mePROD
+import DynaTMT.DynaTMT as mePROD
 import PBLMM
 
 # Configuration
@@ -195,7 +195,7 @@ MS3-based quantification has reduced co-isolation interference, therefore:
 ```python
 from datetime import date
 import pandas as pd
-import DynaTMT_SB.DynaTMT as mePROD
+import DynaTMT.DynaTMT as mePROD
 import PBLMM
 
 # Configuration
@@ -307,7 +307,7 @@ For custom file formats, use the `plain_text_input` class. Column order:
 4. TMT Abundances (all remaining columns)
 
 ```python
-from DynaTMT_SB.DynaTMT import plain_text_input
+from DynaTMT.DynaTMT import plain_text_input
 
 df = pd.read_csv("custom_data.txt", sep='\t', header=0)
 processor = plain_text_input(df, it_adj=True)  # Set it_adj=False if no injection time column

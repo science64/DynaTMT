@@ -1,7 +1,7 @@
 '''
 
-    DynaTMT-py - a python package to process SILAC/TMT proteomics data
-    Copyright (C) 2021  Kevin Klann - 2024 Süleyman Bozkurt
+    DynaTMT - a python package to process SILAC/TMT proteomics data
+    Copyright (C) 2021  Kevin Klann - 2026 Süleyman Bozkurt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,16 +19,15 @@
 '''
 
 __author__ = "Kevin Klann - Süleyman Bozkurt"
-__version__ = "v2.9.2"
+__version__ = "v2.9.3"
 __maintainer__ = "Süleyman Bozkurt"
 __email__ = "sbozkurt.mbg@gmail.com"
 __date__ = '18.01.2021'
-__update__ = '03.06.2024'
+__update__ = '18.03.2026'
 
 from scipy.stats import trim_mean
 import pandas as pd
 import numpy as np
-from numpy.random import random
 import warnings
 import re
 warnings.filterwarnings("ignore")
@@ -252,12 +251,26 @@ class PD_input:
         """
 
         # determine input file is peptide or PSMs
-        if 'PSMs Peptide ID' in input_file.columns:
+        # Column name detection is done case-insensitively to handle variations across PD versions.
+        cols_lower = [col.lower() for col in input_file.columns]
+
+        # PSMs detection:
+        # - Proteome Discoverer 2.4: column 'PSMs Peptide ID'
+        # - Proteome Discoverer 3.2: columns 'Identifying Node Type', 'Identifying Node', or 'Search ID'
+        if 'psms peptide id' in cols_lower or \
+           any(col in cols_lower for col in ['identifying node type', 'identifying node', 'search id']):
             decision = 'PSMs'
-        elif any('Peptide Group ID' in column for column in input_file.columns):
+        # Peptides detection:
+        # - Proteome Discoverer 2.4: column 'Peptide Group ID'
+        # - Proteome Discoverer 3.2: column 'Number of PSMs'
+        elif any('peptide group id' in col for col in cols_lower) or \
+             'number of psms' in cols_lower:
             decision = 'Peptides'
         else:
-            decision = 'Unknown'
+            # Could not determine file type from known column names; defaulting to PSMs
+            # as it is the most likely input when the file type cannot be identified.
+            print('[!] Warning: Could not determine file type (PSMs or Peptides) from column names. Defaulting to PSMs.')
+            decision = 'PSMs'
 
         print('[#] Decision of this file is:', decision)
 
@@ -505,12 +518,26 @@ class plain_text_input:
         '''
 
         # determine input file is peptide or PSMs
-        if 'PSMs Peptide ID' in input_file.columns:
+        # Column name detection is done case-insensitively to handle variations across PD versions.
+        cols_lower = [col.lower() for col in input_file.columns]
+
+        # PSMs detection:
+        # - Proteome Discoverer 2.4: column 'PSMs Peptide ID'
+        # - Proteome Discoverer 3.2: columns 'Identifying Node Type', 'Identifying Node', or 'Search ID'
+        if 'psms peptide id' in cols_lower or \
+           any(col in cols_lower for col in ['identifying node type', 'identifying node', 'search id']):
             decision = 'PSMs'
-        elif any('Peptide Group ID' in column for column in input_file.columns):
+        # Peptides detection:
+        # - Proteome Discoverer 2.4: column 'Peptide Group ID'
+        # - Proteome Discoverer 3.2: column 'Number of PSMs'
+        elif any('peptide group id' in col for col in cols_lower) or \
+             'number of psms' in cols_lower:
             decision = 'Peptides'
         else:
-            decision = 'Unknown'
+            # Could not determine file type from known column names; defaulting to PSMs
+            # as it is the most likely input when the file type cannot be identified.
+            print('[!] Warning: Could not determine file type (PSMs or Peptides) from column names. Defaulting to PSMs.')
+            decision = 'PSMs'
 
         print('[#] Decision of this file is:', decision)
 
