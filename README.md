@@ -77,7 +77,7 @@ pip install .
 ### Required Dependencies
 
 ```bash
-pip install pandas numpy matplotlib statsmodels scipy
+pip install pandas==2.3.3 numpy matplotlib statsmodels scipy
 ```
 
 ### Optional: Install PBLMM for Statistical Analysis
