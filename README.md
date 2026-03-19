@@ -93,7 +93,7 @@ pip install --upgrade git+https://github.com/science64/PBLMM.git
 ## Quick Start
 
 ```python
-import DynaTMT.DynaTMT as mePROD
+import DynaTMT as mePROD
 import pandas as pd
 
 # Load your PSMs file
@@ -128,7 +128,7 @@ MS2-based quantification requires:
 ```python
 from datetime import date
 import pandas as pd
-import DynaTMT.DynaTMT as mePROD
+import DynaTMT as mePROD
 import PBLMM
 
 # Configuration
@@ -195,7 +195,7 @@ MS3-based quantification has reduced co-isolation interference, therefore:
 ```python
 from datetime import date
 import pandas as pd
-import DynaTMT.DynaTMT as mePROD
+import DynaTMT as mePROD
 import PBLMM
 
 # Configuration
