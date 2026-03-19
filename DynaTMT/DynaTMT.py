@@ -18,13 +18,6 @@
 
 '''
 
-__author__ = "Kevin Klann - Süleyman Bozkurt"
-__version__ = "2.9.3"
-__maintainer__ = "Süleyman Bozkurt"
-__email__ = "sbozkurt.mbg@gmail.com"
-__date__ = '18.01.2021'
-__update__ = '18.03.2026'
-
 from scipy.stats import trim_mean
 import pandas as pd
 import numpy as np
