@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="DynaTMT", 
-    version="2.9.3",
+    version="2.9.4",
     author="Süleyman Bozkurt",
     author_email="Bozkurt@med.uni-frankfurt.de",
     # Updated by = "Süleyman Bozkurt",

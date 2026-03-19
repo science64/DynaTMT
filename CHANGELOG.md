@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.9.4] - 2026-03-19
+### Changed
+- Moved package metadata (`__version__`, `__author__`, `__maintainer__`, `__email__`, `__date__`, `__update__`) from `DynaTMT.py` to `__init__.py`.
+- Updated Jupyter notebooks to import `DynaTMT` package directly for version reporting (`DynaTMT.__version__` instead of `mePROD.__version__`).
+
 ## [2.9.3] - 2026-03-18
 ### Updated
 - Repository renamed from `DynaTMT-py-SB` / `DynaTMT-py` to `DynaTMT`. All references in code, documentation, and URLs updated accordingly.
